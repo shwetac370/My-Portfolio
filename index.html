@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Shweta Chauhan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/72218eaae3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <nav>
+                <img id="abc" src="image/logo.jpg" class="logo" >
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div><img id="xyz" src="image/image.jpeg"></div>
+            <div class="header-text">
+                <p><span>Frontend Developer</span></p>
+                <h1>Hi, I'm <span>Shweta Chauhan</span></h1>
+                <h4>From Lucknow, Uttar Pradesh</h4>
+            </div>
+        </div>
+    </div>
+<!---------------about----------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/about.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hey there! 👋 I'm Shweta Chauhan, a 18-year-old Computer Science undergraduate with a passion for Web Development. Currently, I'm embarking on my journey as a Frontend Developer👨🏻‍💻. I'm a fresher, eager to explore new opportunities and face challenges in my field. This is my enthusiastic pursuit, and each day, I strive to learn and grow, aiming to make a meaningful impact. 🚀</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C Programing</span></li>
+                            <li><span>HTML</span></li>
+                            <li><span>css (Cascading Style Sheet)</span></li>
+                            <li><span>JavaScript</span></li>
+                            <li><span>WordPress</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - Current</span><br>Internship at Codsoft.</li>
+                            <li><span>2023 - 2024</span><br>Internship at Devtown.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - 2025</span><br>Bachelor of Computer Applications from Maharishi University of Information Technology, Lucknow</li>
+                            <li><span>2021 - 2022</span><br>Intermediate(12th) from Abhilasha Career Convent School, Lucknow</li>
+                            <li><span>2019 - 2020</span><br>High School(10th) from Shri Kamakhya Bal Kanya Vidya Mandir, Lucknow</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------Portfolio------------------------>
+<div class="portfolio">
+    <div class="container">
+        <h1 class="sub-title3">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="image/calculator.jpeg">
+                <div class="layer">
+                    <h3>Calculator</h3>
+                    <p>This Calculator makes your work easy.</p>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   <!------------Contact---------->
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title2">Contact Me</h1>
+                <h4 class="xy">
+                    <p>shwetac370@gmal.com</p>
+                    <p>6389860226</p>
+                </h4>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <button><a href="image/mycv.pdf" download class="btn">Download CV</a></button>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="number" name="Mobile no." placeholder="Your Mobile no." required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copywrite">
+        <p>Copywrite @Shweta.</p>
+    </div>
+   </div>
+
+
+
+    <script>
+
+       var tablinks = document.getElementsByClassName("tab-links");
+       var tabcontents = document.getElementsByClassName("tab-contents");
+       
+       function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+
+    </script>
+</body>
+</html>
